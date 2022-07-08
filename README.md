@@ -4,9 +4,11 @@ Learn ASP.NET Core MVC | .NET 6 | Full Course for Beginner | EF Core | MSSQL | B
 💻 
 Learn the basics of .NET Core (.NET 6) and then build a simple CRUD application with MVC and Entity Framework core code first in these complete tutorials.
 
+Full Video:
+https://www.youtube.com/watch?v=5vpA2Hg8hp4&
+
 
 <b>Summary</b>
-<hr />
 - Dot NET Core 6.0 Project
 - MSSQL Database connection
 - Entity Framework Core
