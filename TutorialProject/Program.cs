@@ -6,11 +6,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-string connString = builder.Configuration.GetConnectionString("DefaultConnectionMSSQLNoCred");
-
 builder.Services.AddScoped<ApplicationDbContext>();
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connString));
+
+
+//MSSQL DB Conn:
+//string connString = builder.Configuration.GetConnectionString("DefaultConnectionMSSQLNoCred");
+//builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connString));
+
+
+//MySQL DB Conn
+string _GetConnStringName = builder.Configuration.GetConnectionString("DefaultConnectionMySQL");
+builder.Services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));
+
+
 
 
 // Add services to the container.
